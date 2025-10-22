@@ -64,7 +64,7 @@ const features = cities.map((city) => {
   const feature = new ol.Feature({
     geometry: new ol.geom.Point(ol.proj.fromLonLat(city.coord)),
     name: city.name,
-    image: `images/landmarks/${city.img}`,
+    image: `images/${city.img}`,
   });
   feature.setStyle(
     new ol.style.Style({
@@ -172,3 +172,4 @@ const appearOnScroll = new IntersectionObserver(function (entries, observer) {
   });
 }, appearOptions);
 faders.forEach((fader) => appearOnScroll.observe(fader));
+
